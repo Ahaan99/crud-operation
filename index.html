@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Records</title>
+    <link type="text/css" rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>
+                <form id="studentForm" autocomplete="off" onsubmit="onFormSubmit(event)">
+                    <div>
+                        <label for="studentId">Student ID</label>
+                        <input type="text" name="studentId" id="studentId" required>
+                    </div>
+                    <div>
+                        <label for="studentName">Student Name</label>
+                        <input type="text" name="studentName" id="studentName" required>
+                    </div>
+                    <div>
+                        <label for="age">Age</label>
+                        <input type="number" name="age" id="age" required>
+                    </div>
+                    <div>
+                        <label for="grade">Grade</label>
+                        <input type="text" name="grade" id="grade" required>
+                    </div>
+                    <div class="form_action--button">
+                        <input type="submit" value="Submit">
+                        <input type="button" value="Update" onclick="updateRecord()" style="display: none;">
+                        <input type="reset" value="Reset">
+                    </div>
+                </form>
+            </td>
+            <td>
+                <table class="list" id="studentList">
+                    <thead>
+                        <tr>
+                            <th>Student ID</th>
+                            <th>Student Name</th>
+                            <th>Age</th>
+                            <th>Grade</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr id="emptyMessage">
+                        </tr>
+                    </tbody>
+                </table>
+        </tr>
+    </table>
+    <script src="script.js"></script>
+</body>
+</html>
